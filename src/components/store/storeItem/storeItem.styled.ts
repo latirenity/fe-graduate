@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 export const S = {
   container: styled.div`
   position: relative;
@@ -9,8 +8,8 @@ export const S = {
     flex-direction: column;
     align-items: center;
     color: ${({theme}) => theme.colors.grey[0]};
-    background-color: ${({theme}) => theme.colors.grey[5]};
-    box-shadow: 0 0 10px ${({theme}) => theme.colors.grey[6]};
+    background-color: ${({theme}) => theme.colors.grey[2]};
+    box-shadow: 0 0 10px ${({theme}) => theme.colors.grey[3]};
     transition: 0.3s;
     cursor: pointer;
     &:hover {
@@ -20,7 +19,8 @@ export const S = {
   `,
   image: styled.img`
     width: 100%;
-    height: 60%;
+    height: 100%;
+    object-fit: cover;
   `,
   title: styled.h3`
     margin: 10px;

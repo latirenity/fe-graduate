@@ -8,10 +8,11 @@ import { gameInfoActions } from "../../redux/gameInfo/gameInfoSlice";
 export const GamePage = () => {
   const dispatch = useAppDispatch();
   const { 
-    id, 
     name, 
+    description,
     background_image, 
     short_screenshort, 
+    developer,
     released, 
     rating } = useAppSelector( state => state.gameInfo.gamesInfo)
 
@@ -32,13 +33,16 @@ export const GamePage = () => {
         </S.titleContainer>
 
         <S.contentContainer>
-          <S.swiperContainer>SWIPER</S.swiperContainer>
+          <S.swiperContainer>SLIDER</S.swiperContainer>
 
           <S.infoContainer>
-            <S.infoImage src={background_image} alt="not found" />
-            <S.infoDescription>DESCRIPTION</S.infoDescription>
-            <S.infoProperties>{released}</S.infoProperties>
-            <S.infoProperties>{rating}</S.infoProperties>
+            <S.infoImageContainer>
+              <S.infoImage src={background_image} alt="not found" />
+            </S.infoImageContainer>
+            <S.infoDescription>{description}</S.infoDescription>
+            <S.infoProperties>Developer: <S.span>{developer}</S.span></S.infoProperties>
+            <S.infoProperties>Release date: <S.span>{released}</S.span></S.infoProperties>
+            <S.infoProperties>Overall rating: <S.span>{rating} / 5</S.span></S.infoProperties>
           </S.infoContainer>
         </S.contentContainer>
       </C.wrapper>

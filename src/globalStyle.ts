@@ -12,28 +12,29 @@ export const styles = {
 		padding: 8px;
 		overflow: unset;
 		cursor: pointer;
-		background-color: ${({theme}) => theme.colors.grey[6]};
+		background-color: ${({theme}) => theme.colors.blue[3]};
     fill: ${({theme}) => theme.colors.grey[1]};
     transition: 0.3s;
     &:hover {
       background-color: ${({theme}) => theme.colors.grey[0]};
-      fill: ${({theme}) => theme.colors.grey[6]};
+      fill: ${({theme}) => theme.colors.grey[3]};
 			border: 3px solid ${({theme}) => theme.colors.grey[0]};
     }
 	`,
 	button: css`
 		border: none;
     outline: none;
-    background-color: ${({theme}) => theme.colors.grey[1]};
-		color: ${({theme}) => theme.colors.grey[5]};
-    padding: 24px;
-    font-size: 28px;
+		width: 20%;
+		background-color: ${({theme}) => theme.colors.green[3]};
+		color: ${({theme}) => theme.colors.green[1]};
+    padding: 10px;
+    font-size: 22px;
     font-weight: 500;
     cursor: pointer;
 		transition: 0.3s;
 		&:hover {
-			background-color: ${({theme}) => theme.colors.grey[6]};
-			color: ${({theme}) => theme.colors.grey[1]};
+			background-color: ${({theme}) => theme.colors.green[2]};
+			color: ${({theme}) => theme.colors.grey[0]};
 		}
 	`,
 }

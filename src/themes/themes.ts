@@ -1,9 +1,10 @@
-type ColorIndexType = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+type ColorIndexType = 0 | 1 | 2 | 3;
 type ColorPalleteType = {[index in ColorIndexType]: string};
 interface ColorType {
+  error: string,
   grey: ColorPalleteType,
   blue: ColorPalleteType,
-  error: string
+  green: ColorPalleteType,
 } 
 
 export interface ThemesType {
@@ -12,24 +13,24 @@ export interface ThemesType {
 
 export const lightTheme: ThemesType = {
   colors: {
+    error: "ba181b",
     grey: {
       0: "#fff",
-      1: "#cccccc",
-      2: "#999999",
-      3: "#808080",
-      4: "#4d4d4d",
-      5: "#1a1a1a",
-      6: "#000",
+      1: "#a3a3a2",
+      2: "#595959",
+      3: "#000",
     },
     blue: {
-      0: "#90e0ef",
-      1: "#48cae4",
-      2: "#00b4d8",
-      3: "#0096c7",
-      4: "#0077b6",
-      5: "#023e8a",
-      6: "#03045e",
+      0: "#67c1f5",
+      1: "#305070",
+      2: "#1b387d",
+      3: "#171a21",
     },
-    error: "ba181b",
+    green: {
+      0: "#d2efa9",
+      1: "#beee11",
+      2: "#5c7e10",
+      3: "#4c6b22",
+    },
   },
 };

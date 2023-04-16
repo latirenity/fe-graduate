@@ -19,6 +19,7 @@ const getGamesList = createAsyncThunk<GamesListType, void, { rejectValue: string
   async (data, thunksApi) => {
     try {
       const response = await gamesApi.getGamesList()
+      console.log(response)
       return response.data
     } catch (error) {
       return thunksApi.rejectWithValue(`${error}`)

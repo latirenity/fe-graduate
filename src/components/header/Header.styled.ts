@@ -7,12 +7,14 @@ import styled from "styled-components";
 import { styles } from "../../globalStyle";
 
 export const S = {
-  header: styled.header`
+  globalHeader: styled.header`
+      background-color: ${({ theme }) => theme.colors.blue[3]};
+      width: 100%;
+  `,
+  header: styled.div`
     display: flex;
     justify-content: space-between;
-    background-color: ${({ theme }) => theme.colors.grey[6]};
     text-transform: uppercase;
-    padding: 0 24px;
   `,
 
   logoLink: styled(NavLink)`
@@ -32,14 +34,14 @@ export const S = {
   `,
 
   navigateLink: styled(NavLink)`
-    color: ${({ theme }) => theme.colors.grey[2]};
+    color: ${({ theme }) => theme.colors.grey[1]};
     font-size: 18px;
     font-weight: 400;
     border-bottom: 2px solid transparent;
     transition: 0.3s;
     &:hover {
-      color: ${({ theme }) => theme.colors.grey[1]};
-      border-bottom: 2px solid ${({ theme }) => theme.colors.grey[1]};
+      color: ${({ theme }) => theme.colors.grey[0]};
+      border-bottom: 2px solid ${({ theme }) => theme.colors.grey[0]};
     }
   `,
 
@@ -67,7 +69,7 @@ export const S = {
 
   separation: styled.span`
     position: absolute;
-    background-color: ${({ theme }) => theme.colors.grey[2]};
+    background-color: ${({ theme }) => theme.colors.grey[1]};
     padding: 0 1px;
     height: 80%;
     left: 50%;

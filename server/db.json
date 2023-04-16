@@ -3,6 +3,7 @@
     {
       "id": 3498,
       "name": "Grand Theft Auto V",
+      "description": "When a young street hustler, a retired bank robber and a terrifying psychopath land themselves in trouble, they must pull off a series of dangerous heists to survive in a city in which they can trust nobody, least of all each other.",
       "background_image": "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg",
       "short_screenshots": [
         {
@@ -34,12 +35,14 @@
           "image": "https://media.rawg.io/media/screenshots/592/592e2501d8734b802b2a34fee2df59fa.jpg"
         }
       ],
+      "developer": "Rockstar Games",
       "released": "2013-09-17",
       "rating": 4.47
     },
     {
       "id": 3328,
       "name": "The Witcher 3: Wild Hunt",
+      "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
       "background_image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
       "short_screenshots": [
         {
@@ -71,12 +74,14 @@
           "image": "https://media.rawg.io/media/screenshots/f63/f6373ee614046d81503d63f167181803.jpg"
         }
       ],
+      "developer": "CD PROJEKT RED",
       "released": "2015-05-18",
       "rating": 4.66
     },
     {
       "id": 4200,
       "name": "Portal 2",
+      "description": "The \"Perpetual Testing Initiative\" has been expanded to allow you to design co-op puzzles for you and your friends!",
       "background_image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
       "short_screenshots": [
         {
@@ -108,12 +113,14 @@
           "image": "https://media.rawg.io/media/screenshots/415/41543dcc12dffc8e97d85a56ad42cda8.jpg"
         }
       ],
+      "developer": "Valve",
       "released": "2011-04-18",
       "rating": 4.62
     },
     {
       "id": 5286,
       "name": "Tomb Raider (2013)",
+      "description": "Tomb Raider explores the intense origin story of Lara Croft and her ascent from a young woman to a hardened survivor.",
       "background_image": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg",
       "short_screenshots": [
         {
@@ -145,12 +152,14 @@
           "image": "https://media.rawg.io/media/screenshots/2a4/2a4250f83ad9e959d8b4ca9376ae34ea.jpg"
         }
       ],
+      "developer": "Crystal Dynamics, Eidos-Montréal, Feral Interactive (Mac), Nixxes",
       "released": "2013-03-05",
       "rating": 4.05
     },
     {
       "id": 4291,
       "name": "Counter-Strike: Global Offensive",
+      "description": "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
       "background_image": "https://media.rawg.io/media/games/736/73619bd336c894d6941d926bfd563946.jpg",
       "short_screenshots": [
         {
@@ -182,12 +191,14 @@
           "image": "https://media.rawg.io/media/screenshots/337/337a3e98b5933f456a2b37b59fab5f39.jpg"
         }
       ],
+      "developer": "Valve, Hidden Path Entertainment",
       "released": "2012-08-21",
       "rating": 3.57
     },
     {
       "id": 13536,
       "name": "Portal",
+      "description": "Portal™ is a new single player game from Valve. Set in the mysterious Aperture Science Laboratories, Portal has been called one of the most innovative new games on the horizon and will offer gamers hours of unique gameplay.",
       "background_image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
       "short_screenshots": [
         {
@@ -219,12 +230,14 @@
           "image": "https://media.rawg.io/media/screenshots/e72/e7256b4caedf099bcb8ebd332f892334.jpg"
         }
       ],
+      "developer": "Valve",
       "released": "2007-10-09",
       "rating": 4.51
     },
     {
       "id": 12020,
       "name": "Left 4 Dead 2",
+      "description": "Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns.",
       "background_image": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
       "short_screenshots": [
         {
@@ -256,12 +269,14 @@
           "image": "https://media.rawg.io/media/screenshots/5f2/5f2ca569912add2a211b20ba3f576b97.jpg"
         }
       ],
+      "developer": "Valve",
       "released": "2009-11-17",
       "rating": 4.09
     },
     {
       "id": 5679,
       "name": "The Elder Scrolls V: Skyrim",
+      "description": "Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features like remastered art and effects, volumetric god rays, dynamic depth of field, screen-space reflections, and more. Skyrim Special Edition also brings the full power of PC mods to consoles.  New quests, environments, characters, dialogue, armor, weapons and more – with Mods, there are no limits to what you can experience.",
       "background_image": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
       "short_screenshots": [
         {
@@ -293,12 +308,14 @@
           "image": "https://media.rawg.io/media/screenshots/091/091e95b49d5a22de036698fc731395a2.jpg"
         }
       ],
+      "developer": "Bethesda Game Studios",
       "released": "2011-11-11",
       "rating": 4.42
     },
     {
       "id": 4062,
       "name": "BioShock Infinite",
+      "description": "Indebted to the wrong people, private investigator Booker DeWitt must take on an impossible task: travel to Columbia, a flying city above the clouds, and rescue a mysterious woman named Elizabeth. She has the power to tear at the fabric of reality—a power her captor thinks will fulfill his warped vision of the American dream. Soar above Columbia on gravity-defying Sky-Lines, use a variety of firearms and the superhuman abilities, and team up with Elizabeth in a desperate bid for salvation.",
       "background_image": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
       "short_screenshots": [
         {
@@ -330,12 +347,14 @@
           "image": "https://media.rawg.io/media/screenshots/985/985b56daa78e0a23133518d4226e9f97.jpg"
         }
       ],
+      "developer": "Mass Media Games",
       "released": "2013-03-26",
       "rating": 4.39
     },
     {
       "id": 28,
       "name": "Red Dead Redemption 2",
+      "description": "America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.",
       "background_image": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
       "short_screenshots": [
         {
@@ -367,12 +386,14 @@
           "image": "https://media.rawg.io/media/screenshots/985/985e3e1f1d1af1ab0797d43a95d472cc.jpg"
         }
       ],
+      "developer": "Rockstar Games",
       "released": "2018-10-26",
       "rating": 4.59
     },
     {
       "id": 3439,
       "name": "Life is Strange",
+      "description": "Our heroine is Max Caulfield, a photographer. She knows how to turn back time. In the past, other answer options open up to her, she can find other items in random interaction with characters. Max has not fully figured out what the reason for her paranormal phenomenon is, so she uses it extremely carelessly until you start playing. The actions of the game are revealed to us with one of Max's friends — Chloe Price. Together they will conduct a detective investigation in the world of a third-person quest, where all actions are accompanied by a click or a response in the dialogue.",
       "background_image": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg",
       "short_screenshots": [
         {
@@ -404,12 +425,14 @@
           "image": "https://media.rawg.io/media/screenshots/c1d/c1d6333b2da0f920e8de10c14d3c6093.jpg"
         }
       ],
+      "developer": "Dontnoid",
       "released": "2015-01-29",
       "rating": 4.11
     },
     {
       "id": 802,
       "name": "Borderlands 2",
+      "description": "A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack.",
       "background_image": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
       "short_screenshots": [
         {
@@ -441,12 +464,14 @@
           "image": "https://media.rawg.io/media/screenshots/297/29716964351ecd82545f1de3a50dfc4e.jpg"
         }
       ],
+      "developer": "Gearbox Software",
       "released": "2012-09-18",
       "rating": 4.02
     },
     {
       "id": 13537,
       "name": "Half-Life 2",
+      "description": "1998. HALF-LIFE sends a shock through the game industry with its combination of pounding action and continuous, immersive storytelling. Valve's debut title wins more than 50 game-of-the-year awards on its way to being named \"Best PC Game Ever\" by PC Gamer, and launches a franchise with more than...",
       "background_image": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
       "short_screenshots": [
         {
@@ -478,12 +503,14 @@
           "image": "https://media.rawg.io/media/screenshots/e99/e995e154d4f9e2df0367adea528a72c5.jpg"
         }
       ],
+      "developer": "Valve",
       "released": "2004-11-16",
       "rating": 4.5
     },
     {
       "id": 4286,
       "name": "BioShock",
+      "description": "BioShock is a shooter unlike any you've ever played, loaded with weapons and tactics never seen. You'll have a complete arsenal at your disposal from simple revolvers to grenade launchers and chemical throwers, but you'll also be forced to genetically modify your DNA to create an even more deadly...",
       "background_image": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
       "short_screenshots": [
         {
@@ -515,12 +542,14 @@
           "image": "https://media.rawg.io/media/screenshots/146/146e418797aca19296f90d259207414c.jpg"
         }
       ],
+      "developer": "2K Boston, 2K Australia",
       "released": "2007-08-21",
       "rating": 4.36
     },
     {
       "id": 1030,
       "name": "Limbo",
+      "description": "Uncertain of his sister's fate, a boy enters LIMBO",
       "background_image": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg",
       "short_screenshots": [
         {
@@ -552,12 +581,14 @@
           "image": "https://media.rawg.io/media/screenshots/e58/e58d31146e4a9e3786dabcbfc30126bc.jpg"
         }
       ],
+      "developer": "Playdead",
       "released": "2010-07-21",
       "rating": 4.15
     },
     {
       "id": 58175,
       "name": "God of War (2018)",
+      "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
       "background_image": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
       "short_screenshots": [
         {
@@ -589,12 +620,14 @@
           "image": "https://media.rawg.io/media/screenshots/5b7/5b7280fe437c39d3ce501a867c46a998.jpeg"
         }
       ],
+      "developer": "Santa Monica Studio",
       "released": "2018-04-20",
       "rating": 4.59
     },
     {
       "id": 32,
       "name": "Destiny 2",
+      "description": "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
       "background_image": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
       "short_screenshots": [
         {
@@ -626,12 +659,14 @@
           "image": "https://media.rawg.io/media/screenshots/2e7/2e7304d3b9e670f943d0bd1e4be090f0.jpg"
         }
       ],
+      "developer": "Bungie",
       "released": "2017-09-06",
       "rating": 3.56
     },
     {
       "id": 3070,
       "name": "Fallout 4",
+      "description": "The player wakes up from a cryosleep and discovers that he is the only survivor of Shelter 111. After getting to the surface, he finds himself in a Wasteland - a world destroyed by a nuclear war.",
       "background_image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
       "short_screenshots": [
         {
@@ -663,12 +698,14 @@
           "image": "https://media.rawg.io/media/screenshots/99c/99c81029aeace339293753186246099f.jpg"
         }
       ],
+      "developer": "Bethesda Game Studios",
       "released": "2015-11-09",
       "rating": 3.8
     },
     {
       "id": 2454,
       "name": "DOOM (2016)",
+      "description": "The events of the game unfold inside the corridors of a giant research complex. During an unsuccessful experiment with a portal to Hell, the base of the United Aerospace Corporation was in the clutches of invaders – terrible creatures from the underworld. All the employees of the complex were mercilessly killed or turned into lower demons. The enemy's goal is to get to Earth and capture it, and the demons have all the means to accomplish the plan.",
       "background_image": "https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg",
       "short_screenshots": [
         {
@@ -700,12 +737,14 @@
           "image": "https://media.rawg.io/media/screenshots/b77/b77629938389a41160d3b2a56eaed568.jpg"
         }
       ],
+      "developer": "Bethesda Softworks, Id Software, Bethesda Game Studios",
       "released": "2016-05-13",
       "rating": 4.38
     },
     {
       "id": 11859,
       "name": "Team Fortress 2",
+      "description": "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!",
       "background_image": "https://media.rawg.io/media/games/46d/46d98e6910fbc0706e2948a7cc9b10c5.jpg",
       "short_screenshots": [
         {
@@ -737,6 +776,7 @@
           "image": "https://media.rawg.io/media/screenshots/707/707c7488bd6e35bc74d274a923bc1df2.jpg"
         }
       ],
+      "developer": "Valve",
       "released": "2007-10-10",
       "rating": 3.67
     }
