@@ -1,4 +1,4 @@
-import { HeaderIcon } from "./headerIcon/HeaderIcon"
+import { HeaderIcons } from "./headerIcon/HeaderIcons"
 import { S } from "./Header.styled"
 
 
@@ -22,21 +22,23 @@ export const Header = () => {
         </S.navigateList>
 
         <S.optionList>
+
           <S.optionLink to={'/account'}>
-            <HeaderIcon icon={'account'} />
+            <HeaderIcons icon={'account'} />
           </S.optionLink>
-
           <S.optionLink to={'/cart'}>
-            <HeaderIcon icon={'cart'} />
+            <HeaderIcons icon={'cart'} />
           </S.optionLink>
 
-          <S.optionButton>
-            <HeaderIcon icon={'language'} />
-          </S.optionButton>
+          <S.separation />
 
           <S.optionButton>
-            <HeaderIcon icon={'theme'} />
+            <HeaderIcons icon={'language'} />
           </S.optionButton>
+          <S.optionButton>
+            <HeaderIcons icon={'theme'} />
+          </S.optionButton>
+
         </S.optionList>
       </S.header>
     </>

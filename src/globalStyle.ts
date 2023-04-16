@@ -5,32 +5,33 @@ export const styles = {
 		width: 54px;
 		height: 54px;
 		background-color: transparent;
-		border: 3px solid #fff;
+		border: 3px solid ${({theme}) => theme.colors.grey[1]};
 		border-radius: 50%;
 		padding: 8px;
 		overflow: unset;
 		cursor: pointer;
-		background-color: #000;
-    fill: #fff;
+		background-color: ${({theme}) => theme.colors.grey[6]};
+    fill: ${({theme}) => theme.colors.grey[1]};
     transition: 0.3s;
     &:hover {
-      background-color: #fff;
-      fill: #000;
+      background-color: ${({theme}) => theme.colors.grey[0]};
+      fill: ${({theme}) => theme.colors.grey[6]};
+			border: 3px solid ${({theme}) => theme.colors.grey[0]};
     }
 	`,
 	button: css`
 		border: none;
     outline: none;
-    background-color: #fff;
-		color: #000;
+    background-color: ${({theme}) => theme.colors.grey[1]};
+		color: ${({theme}) => theme.colors.grey[5]};
     padding: 24px;
     font-size: 28px;
     font-weight: 500;
     cursor: pointer;
 		transition: 0.3s;
 		&:hover {
-			background-color: #000;
-			color: #fff;
+			background-color: ${({theme}) => theme.colors.grey[6]};
+			color: ${({theme}) => theme.colors.grey[1]};
 		}
 	`,
 }

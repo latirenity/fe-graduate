@@ -10,7 +10,7 @@ export const S = {
   `,
   title: styled.h1`
     margin: 100px 0;
-    color: #fff;
+    color: ${({theme}) => theme.colors.grey[1]};
     text-align: center;
   `,
   button: styled.button`

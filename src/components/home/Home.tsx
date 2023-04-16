@@ -1,4 +1,3 @@
-import React from "react";
 import { S } from "./Home.styled";
 import { C } from "../../styledComponent";
 import { useNavigate } from "react-router-dom";
