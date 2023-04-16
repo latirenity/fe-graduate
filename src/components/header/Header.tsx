@@ -1,47 +1,41 @@
-import { HeaderIcons } from "./headerIcon/HeaderIcons"
-import { S } from "./Header.styled"
-
+import { S } from "./Header.styled";
 
 export const Header = () => {
-
-
   return (
     <>
       <S.header>
-        <S.logoLink to={'/'}>
-          <S.logo src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="" />
+        <S.logoLink to={"/"}>
+          <S.logo
+            src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+            alt=""
+          />
         </S.logoLink>
 
-        <S.navigateList>
-            <S.navigate to={'/store'}>
-              Store
-            </S.navigate>
-            <S.navigate to={'/about'}>
-              About steam
-            </S.navigate>
-        </S.navigateList>
+        <S.navigateContainer>
+          <S.navigateLink to={"/store"}>Store</S.navigateLink>
+          <S.navigateLink to={"/about"}>About steam</S.navigateLink>
+        </S.navigateContainer>
 
-        <S.optionList>
-
-          <S.optionLink to={'/account'}>
-            <HeaderIcons icon={'account'} />
+        <S.optionContainer>
+          <S.optionLink to={"/account"}>
+            <S.optionIconAccount />
           </S.optionLink>
-          <S.optionLink to={'/cart'}>
-            <HeaderIcons icon={'cart'} />
+
+          <S.optionLink to={"/cart"}>
+            <S.optionIconCart />
           </S.optionLink>
 
           <S.separation />
 
           <S.optionButton>
-            <HeaderIcons icon={'language'} />
-          </S.optionButton>
-          <S.optionButton>
-            <HeaderIcons icon={'theme'} />
+            <S.optionIconLanguage />
           </S.optionButton>
 
-        </S.optionList>
+          <S.optionButton>
+            <S.optionIconTheme />
+          </S.optionButton>
+        </S.optionContainer>
       </S.header>
     </>
-  )
-
-}
+  );
+};

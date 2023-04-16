@@ -32,7 +32,6 @@ export const gamesListSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder.addCase(getGamesList.pending, (state) => {
-      // state.gamesList = [];
       state.error = null;
       state.loading = true;
     });

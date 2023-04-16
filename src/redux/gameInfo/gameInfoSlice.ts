@@ -2,20 +2,20 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { gamesApi } from "../../api/games/gamesApi";
 import { GameInfoType } from "../../types/types";
 
-interface GamesListStateType {
+interface GameInfoStateType {
   gamesInfo: GameInfoType;
   error?: string | null;
   loading: boolean;
 }
 
-const initialState: GamesListStateType = {
+const initialState: GameInfoStateType = {
   gamesInfo: {} as GameInfoType,
   error: null,
   loading: false,
 };
 
 const getGame = createAsyncThunk<GameInfoType, number, { rejectValue: string }>(
-  "game/getGame",
+  "gameInfo/getGame",
   async (data, thunksApi) => {
     try {
       const response = await gamesApi.getGame(data);
@@ -27,7 +27,7 @@ const getGame = createAsyncThunk<GameInfoType, number, { rejectValue: string }>(
 );
 
 export const gameInfoSlice = createSlice({
-  name: "games",
+  name: "gameInfo",
   initialState,
   reducers: {},
   extraReducers(builder) {

@@ -8,12 +8,12 @@ interface PropsType {
 
 export const StoreItem = ({ dataItem }: PropsType) => {
   const navigate = useNavigate();
-  const goToItem = () => {
+  const toGamePage = () => {
     navigate(`/store/${dataItem.id}`);
   };
 
   return (
-    <S.container onClick={goToItem}>
+    <S.container onClick={toGamePage}>
       <S.image src={`${dataItem.background_image}`} />
       <S.title>{dataItem.name}</S.title>
       <S.rating>{dataItem.rating}</S.rating>

@@ -7,7 +7,9 @@ export const S = {
   position: relative;
     display: flex;
     flex-direction: column;
-    background-color: ${({theme}) => theme.colors.grey[0]};
+    align-items: center;
+    color: ${({theme}) => theme.colors.grey[0]};
+    background-color: ${({theme}) => theme.colors.grey[5]};
     box-shadow: 0 0 10px ${({theme}) => theme.colors.grey[6]};
     transition: 0.3s;
     cursor: pointer;
@@ -21,7 +23,7 @@ export const S = {
     height: 60%;
   `,
   title: styled.h3`
-
+    margin: 10px;
   `,
   rating: styled.p`
   

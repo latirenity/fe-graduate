@@ -1,5 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 
+
+
 export const styles = {
 	icon: css`
 		width: 54px;

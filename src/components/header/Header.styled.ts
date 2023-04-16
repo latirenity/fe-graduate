@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { ReactComponent as AccountIcon } from "../../resources/icons/account.svg";
+import { ReactComponent as CartIcon } from "../../resources/icons/cart.svg";
+import { ReactComponent as LanguageIcon } from "../../resources/icons/language.svg";
+import { ReactComponent as ThemeIcon } from "../../resources/icons/theme.svg";
 import styled from "styled-components";
+import { styles } from "../../globalStyle";
 
 export const S = {
   header: styled.header`
@@ -18,7 +23,7 @@ export const S = {
     max-width: 200px;
   `,
 
-  navigateList: styled.div`
+  navigateContainer: styled.div`
     display: flex;
     gap: 24px;
     flex-grow: 1;
@@ -26,7 +31,7 @@ export const S = {
     width: 50%;
   `,
 
-  navigate: styled(NavLink)`
+  navigateLink: styled(NavLink)`
     color: ${({ theme }) => theme.colors.grey[2]};
     font-size: 18px;
     font-weight: 400;
@@ -38,10 +43,26 @@ export const S = {
     }
   `,
 
-  optionList: styled.div`
+  optionContainer: styled.div`
     position: relative;
     display: flex;
     align-items: center;
+  `,
+
+  optionIconAccount: styled(AccountIcon)`
+    ${styles.icon}
+  `,
+
+  optionIconCart: styled(CartIcon)`
+    ${styles.icon}
+  `,
+
+    optionIconLanguage: styled(LanguageIcon)`
+    ${styles.icon}
+  `,
+
+    optionIconTheme: styled(ThemeIcon)`
+    ${styles.icon}
   `,
 
   separation: styled.span`
