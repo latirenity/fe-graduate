@@ -1,19 +1,23 @@
-import { S } from "./storeItem.styled"
+import { useNavigate } from "react-router-dom";
+import { S } from "./StoreItem.styled";
+import { GameInfoType } from "../../../types/types";
 
-
-export const StoreItem = ({ data }: any) => {
-  return(
-    <S.container>
-      <S.image src={`${data.background_image}`}/>
-      <S.title>
-      {data.name}
-      </S.title>
-      <S.rating>
-        {data.rating}
-      </S.rating>
-      <S.released>
-        {data.released}
-      </S.released>
-    </S.container>
-  )
+interface PropsType {
+  dataItem: GameInfoType;
 }
+
+export const StoreItem = ({ dataItem }: PropsType) => {
+  const navigate = useNavigate();
+  const goToItem = () => {
+    navigate(`/store/${dataItem.id}`);
+  };
+
+  return (
+    <S.container onClick={goToItem}>
+      <S.image src={`${dataItem.background_image}`} />
+      <S.title>{dataItem.name}</S.title>
+      <S.rating>{dataItem.rating}</S.rating>
+      <S.released>{dataItem.released}</S.released>
+    </S.container>
+  );
+};

@@ -1,46 +1,38 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { gamesApi } from "../../api/games/gamesApi";
+import { GamesListType } from "../../types/types";
 
-export interface GameType {
-  id: number;
-  name: string;
-  background_image: string;
-  short_screenshort?: Object[]
-  released: string;
-  rating: number;
-}
-
-interface GamesStateType {
-  games: GameType[];
+interface GamesListStateType {
+  gamesList: GamesListType;
   error?: string | null;
   loading: boolean;
 }
 
-const initialState: GamesStateType = {
-  games: [],
+const initialState: GamesListStateType = {
+  gamesList: [],
   error: null,
   loading: false,
 };
 
-const getGamesList = createAsyncThunk<GameType[], void, { rejectValue: string}>(
-  "games/getGamesList",
+const getGamesList = createAsyncThunk<GamesListType, void, { rejectValue: string}>(
+  "gamesList/getGamesList",
   async (data, thunksApi) => {
     try {
       const response = await gamesApi.getGamesList()
       return response.data
     } catch (error) {
-      return thunksApi.rejectWithValue('error')
+      return thunksApi.rejectWithValue(`${error}`)
     }
   }
 );
 
-export const gamesSlice = createSlice({
-  name: "games",
+export const gamesListSlice = createSlice({
+  name: "gamesList",
   initialState,
   reducers: {},
   extraReducers(builder) {
     builder.addCase(getGamesList.pending, (state) => {
-      state.games = [];
+      // state.gamesList = [];
       state.error = null;
       state.loading = true;
     });
@@ -50,14 +42,14 @@ export const gamesSlice = createSlice({
     });
     builder.addCase(getGamesList.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.games = payload;
+      state.gamesList = payload;
     });
   },
 });
 
-export const gamesReducer = gamesSlice.reducer
+export const gamesListReducer = gamesListSlice.reducer
 
-export const gamesActions = {
-  ...gamesSlice.actions,
-  getGamesList
+export const gamesListActions = {
+  ...gamesListSlice.actions,
+  getGamesList,
 }

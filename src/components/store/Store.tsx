@@ -1,24 +1,25 @@
 import { useEffect } from "react";
-import { gamesActions } from "../../redux/games/gamesSlice";
+import { gamesListActions } from "../../redux/gamesList/gamesListSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { C } from "../../styledComponent";
-import { StoreItem } from "./storeItem/storeItem";
 import { S } from "./Store.styled";
+import { StoreItem } from "./storeItem/StoreItem";
 
 export const Store = () => {
   const dispatch = useAppDispatch();
-  const { games, error } = useAppSelector((state) => state.games);
+  const { gamesList, error} = useAppSelector( (state) => state.gamesList);
 
   useEffect(() => {
-    dispatch(gamesActions.getGamesList());
-  }, [dispatch]);
+    dispatch(gamesListActions.getGamesList());
+  // eslint-disable-next-line react-hooks/exhaustive-deps  
+  }, []);
 
   return (
     <C.wrapper>
       <S.container>
         {error && "Error"}
-        {games.map((item) => (
-          <StoreItem key={item.id} data={item} />
+        {gamesList.map((item) => (
+          <StoreItem key={item.id} dataItem={item} />
         ))}
       </S.container>
     </C.wrapper>

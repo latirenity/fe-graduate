@@ -1,15 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit"
-import { gamesReducer } from "./games/gamesSlice"
+import { configureStore } from "@reduxjs/toolkit";
+import { gamesListReducer } from "./gamesList/gamesListSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { gameInfoReducer } from "./gameInfo/gameInfoSlice";
 
 export const store = configureStore({
   reducer: {
-    games: gamesReducer,
-  }
-})
+    gamesList: gamesListReducer,
+    gameInfo: gameInfoReducer,
+  },
+});
 
 type AppDispathType = typeof store.dispatch;
 export const useAppDispatch: () => AppDispathType = useDispatch;
 
-type RootStateType = ReturnType<typeof store.getState>
+type RootStateType = ReturnType<typeof store.getState>;
 export const useAppSelector: TypedUseSelectorHook<RootStateType> = useSelector;
