@@ -13,11 +13,11 @@ export const StoreItem = ({ dataItem }: PropsType) => {
   };
 
   return (
-    <S.container onClick={toGamePage}>
+    <S.itemContainer onClick={toGamePage}>
       <S.image src={`${dataItem.background_image}`} />
       <S.title>{dataItem.name}</S.title>
       <S.rating>{dataItem.rating}</S.rating>
       <S.released>{dataItem.released}</S.released>
-    </S.container>
+    </S.itemContainer>
   );
 };

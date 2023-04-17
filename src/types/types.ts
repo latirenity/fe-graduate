@@ -10,3 +10,11 @@ export interface GameInfoType {
 }
 
 export type GamesListType = GameInfoType[];
+
+export interface GamesOptionsType {
+  sortItem: string,
+  sortDirection: string;
+  page: number;
+  limit: number;
+  query: string;
+}

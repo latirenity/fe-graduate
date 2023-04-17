@@ -1,6 +1,7 @@
-import { ErrorMessage, Field, Formik } from "formik";
+import { ErrorMessage, Formik } from "formik";
 import { C } from "../../styledComponent";
 import { S } from "./Login.styled";
+import { validationSchema } from "./validation/validation";
 
 export const Login = () => {
   return (
@@ -15,19 +16,25 @@ export const Login = () => {
               password: "",
             }}
             onSubmit={(event) => console.log("Submit")}
+            validationSchema={validationSchema}
           >
             {({ errors, touched, handleSubmit }) => (
               <S.Form>
                 <S.inputContainer>
-                  <label htmlFor="email">EMAIL</label>
-                  <Field id="email" name="email"></Field>
-                  <ErrorMessage name="email" />
+                  <S.label htmlFor="email">EMAIL</S.label>
+                  <S.Field id="email" name="email"></S.Field>
+                  <S.errorMessage>
+                    <ErrorMessage name="email" />
+                  </S.errorMessage>
                 </S.inputContainer>
                 <S.inputContainer>
-                  <label htmlFor="password">PASSWORD</label>
-                  <Field id="password" name="password"></Field>
-                  <ErrorMessage name="password" />
+                  <S.label htmlFor="password">PASSWORD</S.label>
+                  <S.Field id="password" name="password"></S.Field>
+                  <S.errorMessage>
+                    <ErrorMessage name="password" />
+                  </S.errorMessage>
                 </S.inputContainer>
+                <S.submitButton>Sign in</S.submitButton>
               </S.Form>
             )}
           </Formik>

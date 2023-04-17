@@ -13,7 +13,7 @@ export interface ThemesType {
 
 export const lightTheme: ThemesType = {
   colors: {
-    error: "ba181b",
+    error: "#ba181b",
     grey: {
       0: "#fff",
       1: "#a3a3a2",

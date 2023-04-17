@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Field, Form, Formik } from "formik";
+import { Field, Form } from "formik";
+import { styles } from "../../globalStyle";
 
 export const S = {
   globalContainer: styled.div`
@@ -8,7 +9,6 @@ export const S = {
       url("https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg")
         center top no-repeat,
       #181a21;
-      padding: 80px 0;
   `,
   container: styled.div`
     margin: 0 auto;
@@ -26,21 +26,33 @@ export const S = {
     width: 80%;
   `,
   Form: styled(Form)`
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
     width: 80%;
-    color: ${({theme}) => theme.colors.grey[0]};
+    color: ${({ theme }) => theme.colors.grey[0]};
     z-index: 1;
-    background-color: ${({theme}) => theme.colors.blue[3]};
+    background-color: ${({ theme }) => theme.colors.blue[3]};
   `,
   inputContainer: styled.div`
     display: flex;
     flex-direction: column;
-    margin: 36px;
+    margin-bottom: 36px;
+    width: 80%;
+  `,
+  label: styled.label`
+    font-size: 14px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.blue[0]};
   `,
   Field: styled(Field)`
-  border: none;
-  outline: none;
-  float: none;
-  appearance: none;
-  `
+    ${styles.input}
+  `,
+  errorMessage: styled.p`
+    color: ${({ theme }) => theme.colors.error};
+  `,
+  submitButton: styled.button`
+    ${styles.button};
+  `,
 };
