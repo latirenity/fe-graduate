@@ -1,0 +1,31 @@
+{
+	"header": {
+		"links": {
+			"store": "Store",
+			"aboutSteam": "About steam"
+		}
+	},
+	"login": {
+		"label": {
+			"email": "Email",
+			"password": "Password"
+		},
+		"button": {
+			"signIn": "Sign in"
+		}
+	},
+	"store": {
+		"options": {
+			"viewing": "Viewing",
+			"byRating": "By rating",
+			"byReleaseDate": "By release date",
+			"search": "Search"
+		}
+	},
+	"gamePage": {
+		"addToCart": "Add to cart",
+		"developer": "Developer",
+		"releaseDate": "Release date",
+		"overallRating": "Overall rating"
+	}
+}

@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { S } from "./StoreOptions.styled";
+import { useAppSelector } from "../../../redux/store";
 
 interface PropsType {
 	setSortItem: Dispatch<SetStateAction<string>>;
@@ -12,6 +13,8 @@ export const StoreOptions = ({
 	setSortDirection,
 	setQuery,
 }: PropsType) => {
+	const { language } = useAppSelector((state) => state.settings);
+
 	const [isActiveRatingSort, setIsActiveRatingSort] = useState(false);
 	const [isActiveReleaseSort, setIsActiveReleaseSort] = useState(false);
 
@@ -24,7 +27,7 @@ export const StoreOptions = ({
 	return (
 		<S.optionsContainer>
 			<S.sort>
-				Viewing
+				{language.store.options.viewing}
 				<S.sortButton
 					onClick={() => {
 						isActiveRatingSort
@@ -34,7 +37,7 @@ export const StoreOptions = ({
 					}}
 					active={isActiveRatingSort}
 				>
-					By rating
+					{language.store.options.byRating}
 				</S.sortButton>
 				<S.sortButton
 					onClick={() => {
@@ -45,11 +48,11 @@ export const StoreOptions = ({
 					}}
 					active={isActiveReleaseSort}
 				>
-					By release date
+					{language.store.options.byReleaseDate}
 				</S.sortButton>
 			</S.sort>
 			<S.filter
-				placeholder="Search"
+				placeholder={language.store.options.search}
 				onChange={(event) => setQuery(event.target.value)}
 			/>
 		</S.optionsContainer>

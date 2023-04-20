@@ -1,43 +1,54 @@
+import { settingsActions } from "../../redux/settings/settingsSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { C } from "../../styledComponent";
 import { S } from "./Header.styled";
 
 export const Header = () => {
-  return (
-    <S.globalHeader>
-      <C.wrapper>
-        <S.header>
-          <S.logoLink to={"/"}>
-            <S.logo
-              src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
-            />
-          </S.logoLink>
+	const dispatch = useAppDispatch();
+	const { language } = useAppSelector((state) => state.settings);
 
-          <S.navigateContainer>
-            <S.navigateLink to={"/store"}>Store</S.navigateLink>
-            <S.navigateLink to={"/about"}>About steam</S.navigateLink>
-          </S.navigateContainer>
+	return (
+		<S.globalHeader>
+			<C.wrapper>
+				<S.header>
+					<S.logoLink to={"/"}>
+						<S.logo src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" />
+					</S.logoLink>
 
-          <S.optionContainer>
-            <S.optionLink to={"/account"}>
-              <S.optionIconAccount />
-            </S.optionLink>
+					<S.navigateContainer>
+						<S.navigateLink to={"/store"}>
+							{language.header.links.store}
+						</S.navigateLink>
+						<S.navigateLink to={"/about"}>
+							{language.header.links.aboutSteam}
+						</S.navigateLink>
+					</S.navigateContainer>
 
-            <S.optionLink to={"/cart"}>
-              <S.optionIconCart />
-            </S.optionLink>
+					<S.optionContainer>
+						<S.optionLink to={"/account"}>
+							<S.optionIconAccount />
+						</S.optionLink>
 
-            <S.separation />
+						<S.optionLink to={"/cart"}>
+							<S.optionIconCart />
+						</S.optionLink>
 
-            <S.optionButton>
-              <S.optionIconLanguage />
-            </S.optionButton>
+						<S.separation />
 
-            <S.optionButton>
-              <S.optionIconTheme />
-            </S.optionButton>
-          </S.optionContainer>
-        </S.header>
-      </C.wrapper>
-    </S.globalHeader>
-  );
+						<S.optionButton
+							onClick={() => dispatch(settingsActions.changeLanguage())}
+						>
+							<S.optionIconLanguage />
+						</S.optionButton>
+
+						<S.optionButton
+							onClick={() => dispatch(settingsActions.changeTheme())}
+						>
+							<S.optionIconTheme />
+						</S.optionButton>
+					</S.optionContainer>
+				</S.header>
+			</C.wrapper>
+		</S.globalHeader>
+	);
 };

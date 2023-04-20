@@ -8,8 +8,8 @@ import { styles } from "../../globalStyle";
 
 export const S = {
   globalHeader: styled.header`
-      background-color: ${({ theme }) => theme.colors.blue[3]};
-      width: 100%;
+    background-color: ${({ theme }) => theme.colors.blue[3]};
+    width: 100%;
   `,
   header: styled.div`
     display: flex;
@@ -59,11 +59,11 @@ export const S = {
     ${styles.icon}
   `,
 
-    optionIconLanguage: styled(LanguageIcon)`
+  optionIconLanguage: styled(LanguageIcon)`
     ${styles.icon}
   `,
 
-    optionIconTheme: styled(ThemeIcon)`
+  optionIconTheme: styled(ThemeIcon)`
     ${styles.icon}
   `,
 

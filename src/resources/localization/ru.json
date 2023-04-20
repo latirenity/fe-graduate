@@ -1,0 +1,31 @@
+{
+	"header": {
+		"links": {
+			"store": "Магазин",
+			"aboutSteam": "О steam"
+		}
+	},
+	"login": {
+		"label": {
+			"email": "Эл. почта",
+			"password": "Пароль"
+		},
+		"button": {
+			"signIn": "Войти"
+		}
+	},
+	"store": {
+		"options": {
+			"viewing": "Просмотр",
+			"byRating": "По рейтингу",
+			"byReleaseDate": "По дате релиза",
+			"search": "Поиск"
+		}
+	},
+	"gamePage": {
+		"addToCart": "Добавить в корзину",
+		"developer": "Разработчик",
+		"releaseDate": "Дата релиза",
+		"overallRating": "Общий рейтинг"
+	}
+}

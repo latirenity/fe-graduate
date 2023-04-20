@@ -18,3 +18,5 @@ export interface GamesOptionsType {
 	limitItem: number;
 	query: string;
 }
+
+export type LanguageType = "en" | "ru"
