@@ -6,12 +6,10 @@
 		}
 	},
 	"login": {
+		"signIn": "Войти",
 		"label": {
 			"email": "Эл. почта",
 			"password": "Пароль"
-		},
-		"button": {
-			"signIn": "Войти"
 		}
 	},
 	"store": {
@@ -27,5 +25,9 @@
 		"developer": "Разработчик",
 		"releaseDate": "Дата релиза",
 		"overallRating": "Общий рейтинг"
+	},
+	"cart": {
+		"getButton": "Получить",
+		"deleteButton": "Удалить"
 	}
 }

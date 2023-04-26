@@ -6,22 +6,27 @@ import { GamePage } from "./components/gamePage/GamePage";
 import { Login } from "./components/login/Login";
 import { ThemeProvider } from "styled-components";
 import { useAppSelector } from "./redux/store";
+import { GlobalStyle } from "./globalStyle";
+import { Cart } from "./components/cart/Cart";
+import { Account } from "./components/account/Account";
 
 function App() {
-  const { theme } = useAppSelector((state) => state.settings);
-  console.log(theme)
+	const { theme } = useAppSelector((state) => state.settings);
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/store/:gameId" element={<GamePage />} />
-      </Routes>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/account" element={<Account />} />
+				<Route path="/store" element={<Store />} />
+				<Route path="/store/:gameId" element={<GamePage />} />
+				<Route path="/cart" element={<Cart />} />
+			</Routes>
+		</ThemeProvider>
+	);
 }
 
 export default App;

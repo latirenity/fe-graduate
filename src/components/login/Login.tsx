@@ -11,7 +11,7 @@ export const Login = () => {
 		<S.globalContainer>
 			<C.wrapper>
 				<S.container>
-					<S.title>Sign in</S.title>
+					<S.title>{language.login.signIn}</S.title>
 
 					<Formik
 						initialValues={{
@@ -41,7 +41,7 @@ export const Login = () => {
 										<ErrorMessage name="password" />
 									</S.errorMessage>
 								</S.inputContainer>
-								<S.submitButton>{language.login.button.signIn}</S.submitButton>
+								<S.submitButton>{language.login.signIn}</S.submitButton>
 							</S.Form>
 						)}
 					</Formik>

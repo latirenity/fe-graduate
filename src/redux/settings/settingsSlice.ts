@@ -1,47 +1,55 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ThemesType, darkTheme, lightTheme } from "../../themes/themes";
-import { LanguageType } from "../../types/types";
 import en from "../../resources/localization/en.json";
 import ru from "../../resources/localization/ru.json";
 
+type LanguagesNameType = "en" | "ru";
+type ThemesNameType = "lightTheme" | "darkTheme";
+
+const languagesName: LanguagesNameType[] = ["en", "ru"];
+const themesName: ThemesNameType[] = ["lightTheme", "darkTheme"];
+
 interface SettingsStateType {
-	languageType: LanguageType;
-	language: typeof en & typeof ru;
-	themeType: string | null;
-	theme: ThemesType;
+  languageName: LanguagesNameType;
+  language: typeof en & typeof ru;
+  themeName: ThemesNameType;
+  theme: ThemesType;
 }
 
 const getInitialState = (): SettingsStateType => {
-	const languageType =
-		(localStorage.getItem("language") as LanguageType) || "en";
-	const language = languageType === "en" ? en : ru;
+  let languageName =
+    (localStorage.getItem("language") as LanguagesNameType) || "en";
+  if (!languagesName.includes(languageName)) languageName = "en";
+  const language = languageName === "en" ? en : ru;
 
-	const themeType = localStorage.getItem("theme") || "lightTheme";
-	const theme = themeType === "lightTheme" ? lightTheme : darkTheme;
+  let themeName =
+    (localStorage.getItem("theme") as ThemesNameType) || "lightTheme";
+  if (!themesName.includes(themeName)) themeName = "lightTheme";
+  const theme = themeName === "lightTheme" ? lightTheme : darkTheme;
 
-	return { languageType, language, themeType, theme };
+  return { languageName, language, themeName, theme };
 };
 
 export const settingsSlice = createSlice({
-	name: "settings",
-	initialState: getInitialState(),
-	reducers: {
-		changeTheme: (state) => {
-			state.themeType =
-				state.themeType === "lightTheme" ? "darkTheme" : "lightTheme";
-			state.theme = state.themeType === "lightTheme" ? lightTheme : darkTheme;
-			localStorage.setItem("theme", state.themeType);
-		},
-		changeLanguage: (state) => {
-			state.languageType = state.languageType === "en" ? "ru" : "en";
-			state.language = state.languageType === "en" ? en : ru;
-			localStorage.setItem("language", state.languageType);
-		},
-	},
+  name: "settings",
+  initialState: getInitialState(),
+  reducers: {
+    changeTheme: (state) => {
+      state.themeName =
+        state.themeName === "lightTheme" ? "darkTheme" : "lightTheme";
+      state.theme = state.themeName === "lightTheme" ? lightTheme : darkTheme;
+      localStorage.setItem("theme", state.themeName);
+    },
+    changeLanguage: (state) => {
+      state.languageName = state.languageName === "en" ? "ru" : "en";
+      state.language = state.languageName === "en" ? en : ru;
+      localStorage.setItem("language", state.languageName);
+    },
+  },
 });
 
 export const settingsReducer = settingsSlice.reducer;
 
 export const settingsActions = {
-	...settingsSlice.actions,
+  ...settingsSlice.actions,
 };

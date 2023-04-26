@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { gamesListActions } from "../../redux/gamesList/gamesListSlice";
+import { gamesListActions } from "../../redux/store/gamesListSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { C } from "../../styledComponent";
 import { S } from "./Store.styled";
 import { StoreItem } from "./storeItem/StoreItem";
 import { StoreOptions } from "./storeOptions/StoreOptions";
+import { LinearProgress } from "@mui/material";
 
 export const Store = () => {
 	const [sortItem, setSortItem] = useState("id");
@@ -14,9 +15,10 @@ export const Store = () => {
 	const [query, setQuery] = useState("");
 
 	const dispatch = useAppDispatch();
-	const { gamesList, totalGames, error } = useAppSelector(
+	const { gamesList, totalGames, error, loading } = useAppSelector(
 		(state) => state.gamesList
 	);
+	const { theme } = useAppSelector((state) => state.settings);
 
 	const pageQty = Math.ceil(totalGames / limitItem);
 
@@ -33,7 +35,7 @@ export const Store = () => {
 
 		if (page > pageQty) setPage(1);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [sortItem, page, query]);
+	}, [sortItem, sortDirection, page, query]);
 
 	return (
 		<C.wrapper>
@@ -42,11 +44,11 @@ export const Store = () => {
 				setSortDirection={setSortDirection}
 				setQuery={setQuery}
 			/>
+			{loading && <LinearProgress />}
 			<S.storeContainer>
 				{error && "Error"}
-				{gamesList.map((item) => (
-					<StoreItem key={item.id} dataItem={item} />
-				))}
+				{!loading &&
+					gamesList.map((item) => <StoreItem key={item.id} dataItem={item} />)}
 			</S.storeContainer>
 			<S.Pagination
 				count={pageQty}
@@ -54,6 +56,15 @@ export const Store = () => {
 				size="large"
 				showFirstButton
 				showLastButton
+				color="primary"
+				sx={{
+					"& .MuiPagination-ul": {
+						justifyContent: "space-around",
+					},
+					"& .MuiButtonBase-root": {
+						color: `${theme.colors.grey[0]}`,
+					},
+				}}
 			/>
 		</C.wrapper>
 	);

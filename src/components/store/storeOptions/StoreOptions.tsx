@@ -17,12 +17,15 @@ export const StoreOptions = ({
 
 	const [isActiveRatingSort, setIsActiveRatingSort] = useState(false);
 	const [isActiveReleaseSort, setIsActiveReleaseSort] = useState(false);
+	const [isActiveSortDirection, setIsActiveSortDirection] = useState(false);
 
 	useEffect(() => {
 		isActiveRatingSort && setSortItem("rating");
 		isActiveReleaseSort && setSortItem("released");
+		isActiveSortDirection ? setSortDirection("asc") : setSortDirection("desc");
 		isActiveRatingSort || isActiveReleaseSort || setSortItem("id");
-	}, [isActiveRatingSort, isActiveReleaseSort]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isActiveRatingSort, isActiveReleaseSort, isActiveSortDirection]);
 
 	return (
 		<S.optionsContainer>
@@ -35,7 +38,7 @@ export const StoreOptions = ({
 							: setIsActiveRatingSort(true);
 						isActiveReleaseSort && setIsActiveReleaseSort(false);
 					}}
-					active={isActiveRatingSort}
+					$active={isActiveRatingSort}
 				>
 					{language.store.options.byRating}
 				</S.sortButton>
@@ -46,10 +49,19 @@ export const StoreOptions = ({
 							: setIsActiveReleaseSort(true);
 						isActiveRatingSort && setIsActiveRatingSort(false);
 					}}
-					active={isActiveReleaseSort}
+					$active={isActiveReleaseSort}
 				>
 					{language.store.options.byReleaseDate}
 				</S.sortButton>
+				<S.sortIcon
+					onClick={() => {
+						isActiveSortDirection
+							? setIsActiveSortDirection(false)
+							: setIsActiveSortDirection(true);
+					}}
+				>
+					<S.sortArrow $active={isActiveSortDirection} />
+				</S.sortIcon>
 			</S.sort>
 			<S.filter
 				placeholder={language.store.options.search}

@@ -6,12 +6,10 @@
 		}
 	},
 	"login": {
+		"signIn": "Sign in",
 		"label": {
 			"email": "Email",
 			"password": "Password"
-		},
-		"button": {
-			"signIn": "Sign in"
 		}
 	},
 	"store": {
@@ -27,5 +25,9 @@
 		"developer": "Developer",
 		"releaseDate": "Release date",
 		"overallRating": "Overall rating"
+	},
+	"cart": {
+		"getButton": "Get",
+		"deleteButton": "Delete"
 	}
 }

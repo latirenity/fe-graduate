@@ -54,7 +54,7 @@ export const S = {
   `,
   infoProperties: styled.p`
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.grey[2]};
+    color: ${({ theme }) => theme.colors.grey[0]};
     margin: 14px 0;
   `,
   span: styled.span`
