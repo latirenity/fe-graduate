@@ -2,12 +2,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
   GameInfoType,
   GamesListFromCartType,
+  GamesListType,
   GamesOptionsType,
 } from "../../types/types";
 import { libraryApi } from "../../api/library/libraryApi";
 
 interface LibraryStateType {
-  gamesListFromLibrary: GamesListFromCartType;
+  gamesListFromLibrary: GamesListType;
   totalGamesFromLibrary: number;
   error?: string | null;
   loading: boolean;
@@ -25,6 +26,22 @@ interface GetGamesListFromLibraryType {
   totalGames: number;
 }
 
+const getGamesListFromLibrary = createAsyncThunk<
+  GetGamesListFromLibraryType,
+  GamesOptionsType,
+  { rejectValue: string }
+>("library/getGamesListFromLibrary", async (data, thunksApi) => {
+  try {
+    const response = await libraryApi.getGamesListFromLibrary(data);
+    return {
+      data: response.data,
+      totalGames: response["headers"]["x-total-count"],
+    };
+  } catch (error) {
+    return thunksApi.rejectWithValue(`${error}`);
+  }
+});
+
 const setGameToLibrary = createAsyncThunk<
   GameInfoType,
   GameInfoType | undefined,
@@ -38,17 +55,14 @@ const setGameToLibrary = createAsyncThunk<
   }
 });
 
-const getGamesListFromLibrary = createAsyncThunk<
-  GetGamesListFromLibraryType,
-  GamesOptionsType,
+const deleteGameFromLibrary = createAsyncThunk<
+  GameInfoType,
+  number,
   { rejectValue: string }
->("library/getGamesListFromLibrary", async (data, thunksApi) => {
+>("library/setGameToLibrary", async (data, thunksApi) => {
   try {
-    const response = await libraryApi.getGamesListFromLibrary(data);
-    return {
-      data: response.data,
-      totalGames: response["headers"]["x-total-count"],
-    };
+    const response = await libraryApi.deleteGameFromLibrary(data);
+    return response.data;
   } catch (error) {
     return thunksApi.rejectWithValue(`${error}`);
   }
@@ -71,7 +85,7 @@ export const librarySlice = createSlice({
     });
     builder.addCase(getGamesListFromLibrary.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.gamesListFromLibrary = payload.data;
+      state.gamesListFromLibrary = payload.data as GamesListType;
       state.totalGamesFromLibrary = payload.totalGames;
     });
   },
@@ -83,4 +97,5 @@ export const libraryActions = {
   ...librarySlice.actions,
   getGamesListFromLibrary,
   setGameToLibrary,
+  deleteGameFromLibrary,
 };

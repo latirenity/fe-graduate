@@ -2,40 +2,65 @@ import styled from "styled-components";
 import { styles } from "../../globalStyle";
 
 export const S = {
-	container: styled.div`
+	accountContainer: styled.div`
 		margin-top: 48px;
 		display: flex;
-		justify-content: space-between;
 	`,
-	imageContainer: styled.div`
+	avatarContainer: styled.div`
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-image: url("../../resources/img/without-avatar.png");
 		width: 25%;
 		height: 25%;
+		margin-right: 56px;
 	`,
-	image: styled.img`
+	avatar: styled.img`
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		margin-bottom: 12px;
+		border: 3px solid ${({ theme }) => theme.colors.grey[0]};
 	`,
-	descriptionConrainer: styled.div`
+	uploadImage: styled.input`
+		visibility: hidden;
+	`,
+	labelUploadImage: styled.label`
+		${styles.button}
+		padding: 3px;
+		width: 30%;
+		font-size: 12px;
+		font-weight: 200;
+		text-align: center;
+	`,
+	accountDescriptionContainer: styled.div`
 		display: flex;
 		flex-direction: column;
 	`,
-	userNickname: styled.p`
+	accountNickname: styled.p`
 		font-size: 32px;
 		font-weight: 500;
 		margin-bottom: 34px;
 		color: ${({ theme }) => theme.colors.grey[0]};
 	`,
-	userInformation: styled.p`
+	accountInformation: styled.p`
 		font-size: 18px;
 		font-weight: 400;
 		color: ${({ theme }) => theme.colors.grey[0]};
 	`,
-	achivmentsContainer: styled.div`
-		width: 20%;
+	libraryContainer: styled.div`
+		display: flex;
+		flex-direction: column;
+		margin-top: 76px;
+		background-color: ${({ theme }) => theme.colors.blue[3]};
+		padding: 12px;
+		gap: 12px;
 	`,
-	achivments: styled.button`
-		${styles.button}
-		width: 100%;
+	libraryEmptyText: styled.p`
+		font-size: 36px;
+		font-weight: 500;
+		text-align: center;
+		padding: 12px;
+		color: ${({ theme }) => theme.colors.grey[0]};
 	`,
 };

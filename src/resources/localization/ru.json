@@ -21,7 +21,9 @@
 		}
 	},
 	"gamePage": {
-		"addToCart": "Добавить в корзину",
+		"addToCartButton": "Добавить в корзину",
+		"inCartButton": "В корзине",
+		"inLibraryButton": "В вашей библиотеке",
 		"developer": "Разработчик",
 		"releaseDate": "Дата релиза",
 		"overallRating": "Общий рейтинг"

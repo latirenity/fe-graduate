@@ -21,7 +21,9 @@
 		}
 	},
 	"gamePage": {
-		"addToCart": "Add to cart",
+		"addToCartButton": "Add to cart",
+		"inCartButton": "In cart",
+		"inLibraryButton": "In your library",
 		"developer": "Developer",
 		"releaseDate": "Release date",
 		"overallRating": "Overall rating"

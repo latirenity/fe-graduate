@@ -6,22 +6,26 @@ import { getGamesListFromCart } from "../../redux/cart/cartSlice";
 import { CartItem } from "./cartItem/CartItem";
 
 export const Cart = () => {
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(getGamesListFromCart());
-  }, []);
+	const dispatch = useAppDispatch();
+	useEffect(() => {
+		dispatch(getGamesListFromCart());
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
-  const { gamesListFromCart } = useAppSelector(
-    (state) => state.cart
-  );
+	const { gamesListFromCart } = useAppSelector((state) => state.cart);
 
-  return (
-    <C.wrapper>
-      <S.container>
-        {gamesListFromCart.map((item) => (
-          <CartItem key={item.id} data={item} />
-        ))}
-      </S.container>
-    </C.wrapper>
-  );
+	return (
+		<C.wrapper>
+			<S.title>Your shopping cart</S.title>
+			<S.container>
+				{gamesListFromCart.length > 0 ? (
+					gamesListFromCart.map((item) => (
+						<CartItem key={item.id} data={item} />
+					))
+				) : (
+					<S.cartEmptyText>Cart is empty</S.cartEmptyText>
+				)}
+			</S.container>
+		</C.wrapper>
+	);
 };

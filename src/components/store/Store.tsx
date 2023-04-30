@@ -51,7 +51,7 @@ export const Store = () => {
 					gamesList.map((item) => <StoreItem key={item.id} dataItem={item} />)}
 			</S.storeContainer>
 			<S.Pagination
-				count={pageQty}
+				count={pageQty || 1}
 				onChange={(_, num) => setPage(num)}
 				size="large"
 				showFirstButton

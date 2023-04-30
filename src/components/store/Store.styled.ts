@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const S = {
 	storeContainer: styled.div`
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 33%);
+		grid-template-rows: repeat(2, 300px);
 		gap: 20px;
 	`,
 	Pagination: styled(Pagination)`

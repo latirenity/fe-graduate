@@ -20,7 +20,7 @@ export const CartItem = ({ data }: CartItemProps) => {
     await dispatch(cartActions.getGamesListFromCart());
   };
 
-  const buyingItem = async (event: React.MouseEvent) => {
+  const getItem = async (event: React.MouseEvent) => {
     event.preventDefault();
     await dispatch(gamesListActions.getGamesList({}));
     const selectGame = await gamesList.find((item) => item.id === data.id);
@@ -35,7 +35,7 @@ export const CartItem = ({ data }: CartItemProps) => {
         <S.image src={`${data.background_image}`} />
       </S.imageContainer>
       <S.itemName>{data.name}</S.itemName>
-      <S.itemGetButton onClick={buyingItem}>
+      <S.itemGetButton onClick={getItem}>
         {language.cart.getButton}
       </S.itemGetButton>
       <S.itemDeleteButton onClick={deleteItem}>
