@@ -5,15 +5,17 @@ import { gameInfoReducer } from "./store/gameInfoSlice";
 import { settingsReducer } from "./settings/settingsSlice";
 import { cartReducer } from "./cart/cartSlice";
 import { libraryReducer } from "./library/librarySlice";
+import { userReducer } from "./user/userSlice";
 
 export const store = configureStore({
-  reducer: {
-    gamesList: gamesListReducer,
-    gameInfo: gameInfoReducer,
-    settings: settingsReducer,
-    cart: cartReducer,
-    library: libraryReducer,
-  },
+	reducer: {
+		gamesList: gamesListReducer,
+		gameInfo: gameInfoReducer,
+		settings: settingsReducer,
+		cart: cartReducer,
+		library: libraryReducer,
+		user: userReducer,
+	},
 });
 
 type AppDispathType = typeof store.dispatch;
