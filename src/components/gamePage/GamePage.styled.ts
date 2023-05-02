@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { styles } from "../../globalStyle";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const S = {
 	container: styled.div`
@@ -32,8 +33,12 @@ export const S = {
 			z-index: -1;
 		}
 	`,
-	swiperContainer: styled.div`
+	Swiper: styled(Swiper)`
 		width: 70%;
+	`,
+	SwiperSlide: styled(SwiperSlide)`
+		width: 100%;
+		height: 100%;
 	`,
 	infoContainer: styled.div`
 		width: 30%;

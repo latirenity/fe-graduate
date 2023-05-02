@@ -5,12 +5,14 @@ import { useAppSelector } from "../../../redux/store";
 interface PropsType {
   setSortItem: Dispatch<SetStateAction<string>>;
   setSortDirection: Dispatch<SetStateAction<string>>;
+  query: string;
   setQuery: Dispatch<SetStateAction<string>>;
 }
 
 export const StoreOptions = ({
   setSortItem,
   setSortDirection,
+  query,
   setQuery,
 }: PropsType) => {
   const { language } = useAppSelector((state) => state.settings);
@@ -64,8 +66,9 @@ export const StoreOptions = ({
         </S.sortIcon>
       </S.sort>
       <S.filter
+        value={query}
         placeholder={language.store.options.search}
-        onChange={(event) => setQuery(event.target.value.trim())}
+        onChange={(event) => setQuery(event.target.value.trimStart())}
       />
     </S.optionsContainer>
   );

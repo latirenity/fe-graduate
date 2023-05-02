@@ -3,6 +3,7 @@ import { ReactComponent as AccountIcon } from "../../resources/icons/account.svg
 import { ReactComponent as CartIcon } from "../../resources/icons/cart.svg";
 import { ReactComponent as LanguageIcon } from "../../resources/icons/language.svg";
 import { ReactComponent as ThemeIcon } from "../../resources/icons/theme.svg";
+import { ReactComponent as LogoutIcon } from "../../resources/icons/logout.svg";
 import styled from "styled-components";
 import { styles } from "../../globalStyle";
 
@@ -67,13 +68,15 @@ export const S = {
     ${styles.icon}
   `,
 
+  optionIconLogout: styled(LogoutIcon)`
+    ${styles.icon}
+  `,
+
   separation: styled.span`
-    position: absolute;
     background-color: ${({ theme }) => theme.colors.grey[1]};
     padding: 0 1px;
-    height: 80%;
+    height: 60%;
     left: 50%;
-    transform: translate(-50%);
   `,
 
   optionLink: styled(NavLink)`

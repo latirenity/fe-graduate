@@ -2,10 +2,23 @@ import { ErrorMessage, Formik } from "formik";
 import { C } from "../../styledComponent";
 import { S } from "./Login.styled";
 import { validationSchema } from "./validation/validation";
-import { useAppSelector } from "../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { authActions } from "../../redux/auth/authSlice";
+import { useNavigate } from "react-router-dom";
+import { CreateTokensRequestType } from "../../types/types";
 
 export const Login = () => {
+	const dispatch = useAppDispatch();
 	const { language } = useAppSelector((state) => state.settings);
+	const { isAuthorized } = useAppSelector((state) => state.auth);
+	const navigate = useNavigate();
+
+	const onSubmit = async (values: CreateTokensRequestType) => {
+		await dispatch(authActions.createTokens(values));
+		if (isAuthorized) {
+			navigate("/store");
+		}
+	};
 
 	return (
 		<S.globalContainer>
@@ -15,10 +28,10 @@ export const Login = () => {
 
 					<Formik
 						initialValues={{
-							name: "",
+							email: "",
 							password: "",
 						}}
-						onSubmit={(event) => console.log("Submit")}
+						onSubmit={(values) => onSubmit(values)}
 						validationSchema={validationSchema}
 					>
 						{({ errors, touched, handleSubmit }) => (
@@ -27,7 +40,7 @@ export const Login = () => {
 									<S.label htmlFor="email">
 										{language.login.label.email}
 									</S.label>
-									<S.Field id="email" name="email"></S.Field>
+									<S.Field type="text" id="email" name="email"></S.Field>
 									<S.errorMessage>
 										<ErrorMessage name="email" />
 									</S.errorMessage>
@@ -36,7 +49,7 @@ export const Login = () => {
 									<S.label htmlFor="password">
 										{language.login.label.password}
 									</S.label>
-									<S.Field id="password" name="password"></S.Field>
+									<S.Field type="text" id="password" name="password"></S.Field>
 									<S.errorMessage>
 										<ErrorMessage name="password" />
 									</S.errorMessage>

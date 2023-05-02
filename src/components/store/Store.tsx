@@ -10,7 +10,7 @@ import { LinearProgress } from "@mui/material";
 export const Store = () => {
 	const [sortItem, setSortItem] = useState("id");
 	const [sortDirection, setSortDirection] = useState("desc");
-	const [limitItem, setLimitItem] = useState(6);
+	const [limitItem] = useState(6);
 	const [page, setPage] = useState(1);
 	const [query, setQuery] = useState("");
 
@@ -42,6 +42,7 @@ export const Store = () => {
 			<StoreOptions
 				setSortItem={setSortItem}
 				setSortDirection={setSortDirection}
+				query={query}
 				setQuery={setQuery}
 			/>
 			{loading && <LinearProgress />}

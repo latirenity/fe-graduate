@@ -31,3 +31,14 @@ export interface UserInfoType {
 	description?: string;
 	avatar?: string;
 }
+
+
+export interface CreateTokensRequestType {
+	email: string;
+	password: string;
+}
+
+export interface CreateTokensResponseType {
+	access: string;
+	refresh: string;
+}

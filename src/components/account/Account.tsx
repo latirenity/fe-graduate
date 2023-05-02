@@ -74,8 +74,6 @@ export const Account = () => {
 		}
 	};
 
-	console.log(username, description);
-
 	return (
 		<C.wrapper>
 			<S.accountContainer>
@@ -101,7 +99,7 @@ export const Account = () => {
 					{isEdit ? (
 						<S.editAccountNickname
 							value={username}
-							onChange={(event) => setUsername(event.target.value.trim())}
+							onChange={(event) => setUsername(event.target.value.trimStart())}
 							maxLength={20}
 						/>
 					) : (
@@ -110,7 +108,7 @@ export const Account = () => {
 					{isEdit ? (
 						<S.editAccountInformation
 							value={description}
-							onChange={(event) => setDescription(event.target.value.trim())}
+							onChange={(event) => setDescription(event.target.value.trimStart())}
 							maxLength={100}
 						/>
 					) : (

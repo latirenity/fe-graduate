@@ -6,9 +6,11 @@ import { settingsReducer } from "./settings/settingsSlice";
 import { cartReducer } from "./cart/cartSlice";
 import { libraryReducer } from "./library/librarySlice";
 import { userReducer } from "./user/userSlice";
+import { authReducer } from "./auth/authSlice";
 
 export const store = configureStore({
 	reducer: {
+		auth: authReducer,
 		gamesList: gamesListReducer,
 		gameInfo: gameInfoReducer,
 		settings: settingsReducer,
