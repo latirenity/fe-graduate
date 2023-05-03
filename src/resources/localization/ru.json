@@ -5,6 +5,11 @@
 			"aboutSteam": "О steam"
 		}
 	},
+	"home": {
+		"greeting": "Добро пожаловать в Steam",
+		"loginButton": "Авторизироваться",
+		"guestButton": "Продолжить как гость"
+	},
 	"login": {
 		"signIn": "Войти",
 		"label": {
@@ -30,8 +35,8 @@
 	},
 	"cart": {
 		"cartTitle": "Ваша корзина",
-		"getButton": "Get",
-		"deleteButton": "Delete",
+		"getButton": "Получить",
+		"deleteButton": "Удалить",
 		"emptyCart": "Корзина пуста"
 	},
 	"account": {

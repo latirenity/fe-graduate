@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { C } from "../../styledComponent";
 import { S } from "./Account.styled";
-import { AccountItem } from "./libraryItem/LibraryItem";
+import { LibraryItem } from "./libraryItem/LibraryItem";
 import { libraryActions } from "../../redux/library/librarySlice";
 import { userActions } from "../../redux/user/userSlice";
 
@@ -130,7 +130,7 @@ export const Account = () => {
 			<S.libraryContainer>
 				{gamesListFromLibrary.length > 0 ? (
 					gamesListFromLibrary.map((item) => (
-						<AccountItem key={item.id} data={item} />
+						<LibraryItem key={item.id} data={item} />
 					))
 				) : (
 					<S.libraryEmptyText>

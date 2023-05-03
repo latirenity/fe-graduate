@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { authActions } from "../../redux/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import { CreateTokensRequestType } from "../../types/types";
+import { useEffect } from "react";
 
 export const Login = () => {
 	const dispatch = useAppDispatch();
@@ -15,9 +16,7 @@ export const Login = () => {
 
 	const onSubmit = async (values: CreateTokensRequestType) => {
 		await dispatch(authActions.createTokens(values));
-		if (isAuthorized) {
-			navigate("/store");
-		}
+		navigate("/store");
 	};
 
 	return (
@@ -54,7 +53,9 @@ export const Login = () => {
 										<ErrorMessage name="password" />
 									</S.errorMessage>
 								</S.inputContainer>
-								<S.submitButton>{language.login.signIn}</S.submitButton>
+								<S.submitButton type="submit">
+									{language.login.signIn}
+								</S.submitButton>
 							</S.Form>
 						)}
 					</Formik>

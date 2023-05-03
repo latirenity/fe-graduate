@@ -5,6 +5,11 @@
 			"aboutSteam": "About steam"
 		}
 	},
+	"home": {
+		"greeting": "Welcome to Steam",
+		"loginButton": "Login",
+		"guestButton": "Continue as a guest"
+	},
 	"login": {
 		"signIn": "Sign in",
 		"label": {
