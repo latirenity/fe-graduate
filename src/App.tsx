@@ -20,7 +20,7 @@ function App() {
 
 	useEffect(() => {
 		if (isAuthorized) {
-			dispatch(verifyToken);
+			dispatch(verifyToken());
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);

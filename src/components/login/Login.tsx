@@ -46,7 +46,11 @@ export const Login = () => {
 									<S.label htmlFor="password">
 										{language.login.label.password}
 									</S.label>
-									<S.Field type="text" id="password" name="password"></S.Field>
+									<S.Field
+										type="password"
+										id="password"
+										name="password"
+									></S.Field>
 									<S.errorMessage>
 										<ErrorMessage name="password" />
 									</S.errorMessage>
