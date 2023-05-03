@@ -3,7 +3,7 @@ export interface GameInfoType {
 	name: string;
 	description: string;
 	background_image: string;
-	short_screenshots: {id: number, image: string}[];
+	short_screenshots: { id: number; image: string }[];
 	developer: string;
 	released: string;
 	rating: number;
@@ -31,7 +31,6 @@ export interface UserInfoType {
 	description?: string;
 	avatar?: string;
 }
-
 
 export interface CreateTokensRequestType {
 	email: string;

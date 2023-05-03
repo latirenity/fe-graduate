@@ -3,13 +3,7 @@ import { Field, Form } from "formik";
 import { styles } from "../../globalStyle";
 
 export const S = {
-	globalContainer: styled.div`
-		/* background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181a21 100%) fixed
-				no-repeat,
-			url("https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg")
-				center top no-repeat,
-			#181a21; */
-	`,
+	globalContainer: styled.div``,
 	container: styled.div`
 		margin: 0 auto;
 		display: flex;

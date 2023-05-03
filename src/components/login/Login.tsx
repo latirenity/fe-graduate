@@ -6,12 +6,10 @@ import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { authActions } from "../../redux/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import { CreateTokensRequestType } from "../../types/types";
-import { useEffect } from "react";
 
 export const Login = () => {
 	const dispatch = useAppDispatch();
 	const { language } = useAppSelector((state) => state.settings);
-	const { isAuthorized } = useAppSelector((state) => state.auth);
 	const navigate = useNavigate();
 
 	const onSubmit = async (values: CreateTokensRequestType) => {
