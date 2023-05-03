@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-    background: ${({ theme }) => theme.colors.blue[2]};
+    background: ${({ theme }) => theme.colors.blue[1]};
 		border-style: border-box;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

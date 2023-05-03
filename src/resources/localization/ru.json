@@ -29,7 +29,16 @@
 		"overallRating": "Общий рейтинг"
 	},
 	"cart": {
-		"getButton": "Получить",
-		"deleteButton": "Удалить"
+		"cartTitle": "Ваша корзина",
+		"getButton": "Get",
+		"deleteButton": "Delete",
+		"emptyCart": "Корзина пуста"
+	},
+	"account": {
+		"editDescriptionButton": "Редактировать",
+		"saveDescriptionButton": "Сохранить",
+		"updateAvatarButton": "Обновить аватар",
+		"deleteAvatarButton": "Удалить",
+		"emptyLibrary": "Библиотека пуста"
 	}
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { styles } from "../../globalStyle";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 
 export const S = {
 	container: styled.div`
@@ -34,11 +34,13 @@ export const S = {
 		}
 	`,
 	Swiper: styled(Swiper)`
+		margin-right: 12px;
 		width: 70%;
 	`,
-	SwiperSlide: styled(SwiperSlide)`
+	swiperImg: styled.img`
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
 	`,
 	infoContainer: styled.div`
 		width: 30%;
@@ -54,6 +56,10 @@ export const S = {
 		object-fit: cover;
 	`,
 	infoDescription: styled.p`
+		display: -webkit-box;
+		-webkit-line-clamp: 8;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 		font-size: 16px;
 		color: ${({ theme }) => theme.colors.grey[0]};
 	`,

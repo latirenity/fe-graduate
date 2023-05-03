@@ -29,7 +29,16 @@
 		"overallRating": "Overall rating"
 	},
 	"cart": {
+		"cartTitle": "Your shopping cart",
 		"getButton": "Get",
-		"deleteButton": "Delete"
+		"deleteButton": "Delete",
+		"emptyCart": "Cart is empty"
+	},
+	"account": {
+		"editDescriptionButton": "Edit",
+		"saveDescriptionButton": "Save",
+		"updateAvatarButton": "Update avatar",
+		"deleteAvatarButton": "Delete",
+		"emptyLibrary": "Library is empty"
 	}
 }

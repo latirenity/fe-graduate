@@ -3,13 +3,13 @@ import { storeApi } from "../../api/store/storeApi";
 import { GameInfoType } from "../../types/types";
 
 interface GameInfoStateType {
-  gamesInfo: GameInfoType;
+  gameInfo: GameInfoType;
   error?: string | null;
   loading: boolean;
 }
 
 const initialState: GameInfoStateType = {
-  gamesInfo: {} as GameInfoType,
+  gameInfo: {} as GameInfoType,
   error: null,
   loading: false,
 };
@@ -32,7 +32,7 @@ export const gameInfoSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder.addCase(getGame.pending, (state) => {
-      state.gamesInfo = {} as GameInfoType;
+      state.gameInfo = {} as GameInfoType;
       state.error = null;
       state.loading = true;
     });
@@ -42,7 +42,7 @@ export const gameInfoSlice = createSlice({
     });
     builder.addCase(getGame.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.gamesInfo = payload;
+      state.gameInfo = payload;
     });
   },
 });

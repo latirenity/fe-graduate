@@ -3,7 +3,7 @@ export interface GameInfoType {
 	name: string;
 	description: string;
 	background_image: string;
-	short_screenshort: Object[];
+	short_screenshots: {id: number, image: string}[];
 	developer: string;
 	released: string;
 	rating: number;

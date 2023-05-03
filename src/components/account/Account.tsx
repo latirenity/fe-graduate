@@ -21,6 +21,7 @@ export const Account = () => {
 
 	const { user } = useAppSelector((state) => state.user);
 	const { gamesListFromLibrary } = useAppSelector((state) => state.library);
+	const { language } = useAppSelector((state) => state.settings);
 
 	const [username, setUsername] = useState<string>(user.username ?? "");
 	const [description, setDescription] = useState<string>(
@@ -80,7 +81,7 @@ export const Account = () => {
 				<S.avatarContainer $avatarActive={!user.avatar}>
 					{user.avatar && <S.avatar src={user.avatar} />}
 					<S.labelUploadAvatar>
-						Update avatar
+						{language.account.updateAvatarButton}
 						<input
 							value={pathAvatar}
 							type="file"
@@ -91,7 +92,7 @@ export const Account = () => {
 					</S.labelUploadAvatar>
 					{user.avatar && (
 						<S.deleteAvatarButton onClick={deleteAvatar}>
-							Delete
+							{language.account.deleteAvatarButton}
 						</S.deleteAvatarButton>
 					)}
 				</S.avatarContainer>
@@ -108,7 +109,9 @@ export const Account = () => {
 					{isEdit ? (
 						<S.editAccountInformation
 							value={description}
-							onChange={(event) => setDescription(event.target.value.trimStart())}
+							onChange={(event) =>
+								setDescription(event.target.value.trimStart())
+							}
 							maxLength={100}
 						/>
 					) : (
@@ -117,7 +120,9 @@ export const Account = () => {
 						</S.accountInformation>
 					)}
 					<S.editButton onClick={handleEditDescription}>
-						{isEdit ? "Save" : "Edit"}
+						{isEdit
+							? language.account.saveDescriptionButton
+							: language.account.editDescriptionButton}
 					</S.editButton>
 				</S.accountDescriptionContainer>
 			</S.accountContainer>
@@ -128,7 +133,9 @@ export const Account = () => {
 						<AccountItem key={item.id} data={item} />
 					))
 				) : (
-					<S.libraryEmptyText>Library is empty</S.libraryEmptyText>
+					<S.libraryEmptyText>
+						{language.account.emptyLibrary}
+					</S.libraryEmptyText>
 				)}
 			</S.libraryContainer>
 		</C.wrapper>

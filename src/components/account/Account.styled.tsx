@@ -50,7 +50,7 @@ export const S = {
 	editButton: styled.button`
 		${styles.button}
 		padding: 3px;
-		max-width: 54px;
+		max-width: 104px;
 		width: 100%;
 		font-size: 10px;
 		font-weight: 200;
@@ -65,7 +65,6 @@ export const S = {
 	accountNickname: styled.p`
 		font-size: 32px;
 		font-weight: 500;
-
 		margin-bottom: 34px;
 		color: ${({ theme }) => theme.colors.grey[0]};
 	`,

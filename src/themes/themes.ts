@@ -22,8 +22,8 @@ export const lightTheme: ThemesType = {
 		},
 		blue: {
 			0: "#67c1f5",
-			1: "#305070",
-			2: "#192a3e",
+			1: "#192a3e",
+			2: "#305070",
 			3: "#171a21",
 		},
 		green: {

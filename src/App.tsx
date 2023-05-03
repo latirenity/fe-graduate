@@ -11,6 +11,7 @@ import { Cart } from "./components/cart/Cart";
 import { Account } from "./components/account/Account";
 import { verifyToken } from "./redux/auth/authSlice";
 import { useEffect } from "react";
+import { NotFound } from "./components/notFound/NotFound";
 
 function App() {
 	const { theme } = useAppSelector((state) => state.settings);
@@ -29,6 +30,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="*" element={<NotFound />} />
 				{!isAuthorized && <Route path="/login" element={<Login />} />}
 				{isAuthorized && (
 					<>

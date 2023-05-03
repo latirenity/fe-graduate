@@ -12,18 +12,20 @@ export const Cart = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	const { language } = useAppSelector((state) => state.settings);
+
 	const { gamesListFromCart } = useAppSelector((state) => state.cart);
 
 	return (
 		<C.wrapper>
-			<S.title>Your shopping cart</S.title>
+			<S.title>{language.cart.cartTitle}</S.title>
 			<S.container>
 				{gamesListFromCart.length > 0 ? (
 					gamesListFromCart.map((item) => (
 						<CartItem key={item.id} data={item} />
 					))
 				) : (
-					<S.cartEmptyText>Cart is empty</S.cartEmptyText>
+					<S.cartEmptyText>{language.cart.emptyCart}</S.cartEmptyText>
 				)}
 			</S.container>
 		</C.wrapper>
